@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>Feedback Order Page</title>
+    <style>.container {
+        margin: 50px auto;
+        padding: 20px;
+        max-width: 600px;
+        border: 2px solid #ccc;
+        border-radius: 5px;
+    }
+    
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    label {
+        font-weight: bold;
+        margin-top: 10px;
+    }
+    
+    input[type=text], input[type=email], textarea {
+        padding: 10px;
+        margin-top: 5px;
+        margin-bottom: 15px;
+        border: 2px solid #ccc;
+        border-radius: 5px;
+    }
+    
+    input[type=submit] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        margin-top: 15px;
+    }
+    
+    input[type=submit]:hover {
+        background-color: #45a049;
+    }
+    </style>
+    
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="container">
+        <h1>Зворотній зв'язок</h1>
+		<form action="send_mail.php" method="post">
+			<label for="name">Як до Вас звертатися:</label>
+			<input type="text" id="name" name="name" placeholder="Your name.." required>
+
+			<label for="email">Email:</label>
+			<input type="email" id="email" name="email" placeholder="emeil" required>
+
+			<label for="subject">Тема:</label>
+			<input type="text" id="subject" name="subject" placeholder="Subject.." required>
+
+			<label for="message">Повідомлення:</label>
+			<textarea id="message" name="message" placeholder="Write your message.." style="height:200px" required></textarea>
+
+			<input type="submit" value="Відправити">
+		</form>
+	</div>
+</body>
+</html>
